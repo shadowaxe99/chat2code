@@ -1,0 +1,24 @@
+digraph General_AI_Agent_System {
+  rankdir=LR;
+  node [shape=box];
+
+  Agent -> BlockchainManager;
+  Agent -> Ethics;
+  Agent -> FlowController;
+  Agent -> InputValidation;
+  Agent -> Integration;
+  Agent -> LearningManager;
+  Agent -> LoadBalancer;
+  Agent -> PersonalAssistant;
+  Agent -> Preprocessing;
+  Agent -> RemoteAssistant;
+  Agent -> SecurityManager;
+  Agent -> SkillRegistry;
+  Agent -> StateManager;
+  Agent -> TaskManager;
+  Agent -> TextAgent;
+  Agent -> Trainer;
+  Agent -> UIManager;
+  Agent -> UserInterface;
+  Agent -> VoiceAgent;
+}
