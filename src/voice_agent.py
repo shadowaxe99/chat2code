@@ -1,8 +1,10 @@
-class VoiceAgent:
-    def __init__(self):
-        pass
+from ai_agent import AIAgent
 
-    def process_voice(self, voice):
-        # Process the given voice
-        result = 'Voice processed for user interaction through voice communication'
-        return result
+class VoiceAgent(AIAgent):
+    def __init__(self):
+        super().__init__()
+
+    def voice_interaction(self):
+        # Overriding the voice_interaction method
+        # Code to handle voice interactions
+        pass

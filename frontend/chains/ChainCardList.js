@@ -1,17 +1,17 @@
 import React from "react";
 import { Box, Flex } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import ChainCard from "chains/ChainCard";
+import MessageCard from "chains/MessageCard";
 
-export const ChainCardList = ({ page = {} }) => {
-  const { objects: chains } = page;
+export const MessageCardList = ({ messages = [] }) => {
+  
 
   return (
     <Flex align="center" justify="left" flexWrap="wrap">
-      {chains?.map((chain) => (
+      {messages.map((message) => (
         <Box key={chain.id} p={5} width="400px">
-          <Link to={`/chains/${chain.id}`}>
-            <ChainCard chain={chain} />
+          <Link >
+            <MessageCard message={message} />
           </Link>
         </Box>
       ))}

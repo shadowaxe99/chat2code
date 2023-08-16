@@ -3,6 +3,5 @@ class DataAnalysis:
         pass
 
     def analyze_data(self, data):
-        # Analyze the given data
-        result = 'Data analyzed'
-        return result
+        # Add logic to analyze the data
+        return "Data analyzed"

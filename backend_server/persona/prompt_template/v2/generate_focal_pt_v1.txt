@@ -1,0 +1,13 @@
+Given the following statements about a persona, generate a set of questions that would help to further explore these aspects of the persona's life and experiences.
+
+Statements:
+1. The persona is a professional athlete.
+2. They have recently experienced a significant career setback.
+3. They are considering retirement but are unsure about their next steps.
+
+Questions:
+1. How does the persona feel about their recent career setback?
+2. What factors are contributing to their consideration of retirement?
+3. What are their fears and hopes about life after retirement?
+4. How do they plan to address these fears and hopes?
+5. What support systems do they have in place to help them through this transition?

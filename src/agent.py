@@ -1,12 +1,25 @@
-class Agent:
+from src.amorphic_ai_agent import C3PIAgent
+
+class Agent(C3PIAgent):
     def __init__(self):
-        self.status = 'idle'
+        super().__init__()
 
-    def run(self):
-        self.status = 'running'
+    def start_interaction(self):
+        # Code to start the agent interaction
+        pass
 
-    def stop(self):
-        self.status = 'idle'
+    def voice_interaction(self):
+        # Code to handle voice interactions
+        pass
 
-    def get_status(self):
-        return self.status
+    def chat_interaction(self):
+        # Code to handle chat interactions
+        pass
+
+    def email_interaction(self):
+        # Code to handle email interactions
+        pass
+
+    def text_interaction(self):
+        # Code to handle text interactions
+        pass

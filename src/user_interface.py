@@ -1,8 +1,12 @@
 class UserInterface:
     def __init__(self):
+        # Initialize the user interface
         pass
 
-    def display_UI(self, UI):
-        # Display the given UI
-        result = 'UI displayed ensuring easy user access for users with different abilities and preferences, adapting the agent's language, tone, and functionalities to different cultures and languages, providing a more personalized experience'
-        return result
+    def display_message(self, message):
+        # Display a message to the user
+        pass
+
+    def get_user_input(self):
+        # Get user input
+        pass

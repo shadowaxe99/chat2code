@@ -1,77 +1,35 @@
 digraph AI_Agent_System {
-    // General settings
-    node [shape=box, style="rounded,filled"];
-    rankdir=TB;
-    compound=true;
+  rankdir=LR;
+  node [shape=box];
 
-    // Clusters
-    subgraph cluster_security {
-        label="Security & Validation";
-        color=blue;
-        style="rounded,filled";
-        fillcolor=lightblue;
-        security [label="AI Security Layer\n(Authentication, Anomaly Detection)", fillcolor=lightgreen];
-        validation [label="AI Input Validation\n(Data Integrity, Predictive Analysis)", fillcolor=lightyellow];
-    }
+  subgraph cluster_amorphic {
+    label = "Amorphic AI Agent";
+    style = filled;
+    color = lightblue;
 
-    subgraph cluster_interaction {
-        label="User Interaction & Context Understanding";
-        color=blue;
-        style="rounded,filled";
-        fillcolor=lightblue;
-        user_interaction [label="User Interaction Layer\n(Text, Voice, UI Management)", fillcolor=lightcoral];
-        context_understanding [label="Context Understanding\n(Situation Analysis, User Preferences)", fillcolor=lightcoral];
-    }
+    AmorphicAI [label="AmorphicAI"];
+    CommunicationChannels [label="CommunicationChannels"];
+    UserInterface [label="UserInterface"];
+    Agent [label="Agent"];
 
-    subgraph cluster_processing {
-        label="Processing & Decision Making";
-        color=blue;
-        style="rounded,filled";
-        fillcolor=lightblue;
-        data_processing [label="AI Data Processing\n(Preprocessing, Transformation)", fillcolor=lightsalmon];
-        decision_making [label="AI Decision Making\n(Reasoning, Planning, Execution)", fillcolor=lightsalmon];
-    }
+    AmorphicAI -> CommunicationChannels;
+    AmorphicAI -> UserInterface;
+    AmorphicAI -> Agent;
+  }
 
-    subgraph cluster_integration {
-        label="Integration & External Communication";
-        color=blue;
-        style="rounded,filled";
-        fillcolor=lightblue;
-        external_integration [label="External Integration\n(APIs, Data Exchange, IoT)", fillcolor=lightcyan];
-        communication [label="Communication Layer\n(Messaging, Notifications, Collaboration)", fillcolor=lightcyan];
-    }
+  subgraph cluster_external {
+    label = "External Modules";
+    style = filled;
+    color = lightgray;
 
-    subgraph cluster_self_management {
-        label="Self-Management & Optimization";
-        color=blue;
-        style="rounded,filled";
-        fillcolor=lightblue;
-        self_governance [label="Self-Governance\n(AI Audit, Policy Learning)", fillcolor=gold];
-        self_monitoring [label="Self-Monitoring & Alerting\n(AI System Health, Anomaly Detection)", fillcolor=yellow];
-        self_optimization [label="Self-Optimization\n(AI Performance Tuning, Continuous Learning)", fillcolor=lightgray];
-    }
+    MetaGPT [label="MetaGPT"];
+    Clippy [label="Clippy"];
+    YeagerAIAgent [label="YeagerAIAgent"];
+    AgentGPT [label="AgentGPT"];
+  }
 
-    // Other Nodes
-    start [label="Start", shape=ellipse];
-    response [label="Response to User", fillcolor=lightpink];
-    error_handling [label="AI Error Handling\n(Error Prediction, Recovery Automation)", fillcolor=red];
-    end [label="End", shape=ellipse];
-
-    // Edges
-    start -> security;
-    security -> validation [label="on success", ltail=cluster_security];
-    security -> error_handling [label="on failure", ltail=cluster_security];
-    validation -> user_interaction [ltail=cluster_security];
-    user_interaction -> context_understanding [ltail=cluster_interaction];
-    context_understanding -> data_processing [ltail=cluster_interaction];
-    data_processing -> decision_making [ltail=cluster_processing];
-    decision_making -> external_integration [ltail=cluster_processing];
-    external_integration -> communication [ltail=cluster_integration];
-    communication -> self_governance [ltail=cluster_integration];
-    self_governance -> self_monitoring [ltail=cluster_self_management];
-    self_monitoring -> self_optimization [ltail=cluster_self_management];
-    self_optimization -> response [ltail=cluster_self_management];
-    response -> end;
-    {security, validation, user_interaction, context_understanding, data_processing, decision_making, external_integration, communication, self_governance, self_monitoring} -> error_handling [label="on error"];
-    error_handling -> end [label="handle & terminate"];
+  MetaGPT -> AmorphicAI;
+  Clippy -> AmorphicAI;
+  YeagerAIAgent -> AmorphicAI;
+  AgentGPT -> AmorphicAI;
 }

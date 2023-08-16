@@ -1,8 +1,7 @@
-class TextAgent:
-    def __init__(self):
-        pass
+from ai_agent import AIAgent
 
-    def process_text(self, text):
-        # Process the given text
-        result = 'Text processed with a friendly, approachable dialogue style'
-        return result
+class TextAgent(AIAgent):
+    def text_interaction(self):
+        # Overriding the text_interaction method
+        # Code to handle text interactions
+        pass

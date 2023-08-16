@@ -8,8 +8,8 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
-const ChainCard = ({ chain }) => {
-  if (chain == null) {
+const MessageCard = ({ message }) => {
+  if (message == null) {
     return null;
   }
 
@@ -29,7 +29,7 @@ const ChainCard = ({ chain }) => {
       <CardBody>
         <VStack alignItems="start" spacing={2}>
           <Heading as="h5" size="xs">
-            {chain.name}
+            {message.sender}
           </Heading>
           <Box
             maxWidth="350px"
@@ -42,7 +42,7 @@ const ChainCard = ({ chain }) => {
               WebkitLineClamp: 3,
             }}
           >
-            {chain.description}
+            {message.text}
           </Box>
         </VStack>
       </CardBody>
@@ -50,4 +50,4 @@ const ChainCard = ({ chain }) => {
   );
 };
 
-export default ChainCard;
+export default MessageCard;

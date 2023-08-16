@@ -1,21 +1,14 @@
 import asyncio
-import websockets
 
 
 class Server:
-    def __init__(self, host='localhost', port=8765):
-        self.host = host
-        self.port = port
+    def __init__(self):
+        pass
 
-    async def start(self):
-        async with websockets.serve(self.handler, self.host, self.port):
-            await asyncio.Future()  # run forever
+    def start(self):
+        # Code to start the server
+        pass
 
-    async def handler(self, websocket, path):
-        async for message in websocket:
-            await websocket.send(message)
-
-
-if __name__ == '__main__':
-    server = Server()
-    asyncio.run(server.start())
+    def stop(self):
+        # Code to stop the server
+        pass
