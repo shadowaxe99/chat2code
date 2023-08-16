@@ -1,12 +1,14 @@
-from amorphic.agent_system import AgentSystem
+import asyncio
+from server import Server
+
+
+async def startup():
+    server = Server()
+    server.start()
 
 
 def main():
-    # Create an instance of the AgentSystem
-    agent_system = AgentSystem()
-
-    # Start the agent system
-    agent_system.start()
+    asyncio.run(startup())
 
 
 if __name__ == '__main__':

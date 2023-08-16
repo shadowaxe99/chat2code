@@ -40,35 +40,27 @@ To install the Amorphic project, follow these steps:
    pip install -r requirements.txt
    ```
 
-6. Set up any necessary configuration files or environment variables.
-
-   - Configuration Files: Check if there are any configuration files provided with the project. If so, copy the template configuration file and update it with the required settings.
-
-   - Environment Variables: If the project requires environment variables, create a `.env` file in the project directory and add the necessary variables.
-
-7. Run the main script to start the agent system.
+6. Start the application.
 
    ```shell
    python main.py
    ```
 
-   The agent system will start running and you can interact with it through the provided APIs and interfaces.
-
-8. Open your web browser and navigate to `http://localhost:8000` to access the Amorphic project.
+7. Open your web browser and navigate to `http://localhost:8000` to access the Amorphic project.
 
    Note: The port number may vary depending on the configuration.
 
-9. Explore the capabilities of the Amorphic project and customize it according to your needs.
+8. Explore the capabilities of the Amorphic project and customize it according to your needs.
 
    - Interact with the agent system through the provided APIs and interfaces.
    - Modify the existing components or add new ones to extend the functionality.
 
-10. When you're done using the Amorphic project, deactivate the virtual environment.
+9. When you're done using the Amorphic project, deactivate the virtual environment.
 
     ```shell
     deactivate
     ```
 
-11. Optionally, you can remove the virtual environment by deleting the `venv` directory.
+10. Optionally, you can remove the virtual environment by deleting the `venv` directory.
 
 Please refer to the project documentation for more detailed information on the project structure, configuration options, and usage guidelines.
