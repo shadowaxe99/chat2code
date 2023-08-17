@@ -7,4 +7,4 @@ class EmailAgent(AIAgent):
     def email_interaction(self):
         # Overriding the email_interaction method
         # Code to handle email interactions
-        pass
+        print('Email interaction initiated.')

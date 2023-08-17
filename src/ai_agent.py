@@ -1,23 +1,14 @@
+from agent_memory import AgentMemory
+
 class AIAgent:
     def __init__(self):
-        pass
+        self.memory = AgentMemory()
 
-    def start_interaction(self):
-        # Code to start the AI agent interaction
-        pass
+    def store_memory(self, key, value):
+        self.memory.store_memory(key, value)
 
-    def voice_interaction(self):
-        # Code to handle voice interactions
-        pass
+    def retrieve_memory(self, key):
+        return self.memory.retrieve_memory(key)
 
-    def chat_interaction(self):
-        # Code to handle chat interactions
-        pass
-
-    def email_interaction(self):
-        # Code to handle email interactions
-        pass
-
-    def text_interaction(self):
-        # Code to handle text interactions
-        pass
+    def clear_memory(self):
+        self.memory.clear_memory()

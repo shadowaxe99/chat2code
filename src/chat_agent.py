@@ -7,4 +7,4 @@ class ChatAgent(AIAgent):
     def chat_interaction(self):
         # Overriding the chat_interaction method
         # Code to handle chat interactions
-        pass
+        print('Chat interaction initiated.')

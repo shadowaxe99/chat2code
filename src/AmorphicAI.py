@@ -4,16 +4,16 @@ class AmorphicAI:
 
     def voice_interaction(self):
         # Code for voice interaction
-        pass
+        print('Voice interaction initiated.')
 
     def chat_interaction(self):
         # Code for chat interaction
-        pass
+        print('Chat interaction initiated.')
 
     def email_interaction(self):
         # Code for email interaction
-        pass
+        print('Email interaction initiated.')
 
     def text_interaction(self):
         # Code for text interaction
-        pass
+        print('Text interaction initiated.')

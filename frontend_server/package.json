@@ -1,0 +1,15 @@
+{
+  "name": "amorphic-frontend-server",
+  "version": "1.0.0",
+  "description": "Amorphic Frontend Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

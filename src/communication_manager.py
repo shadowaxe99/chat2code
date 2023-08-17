@@ -1,19 +1,12 @@
 class CommunicationManager:
     def __init__(self):
-        # Initialize the communication manager
-        self.messages = []
+        # Initialize communication manager
+        pass
 
     def send_message(self, message):
-        # Send a message
-        self.messages.append(message)
-        print(f'Message sent: {message}')
+        # Code to send a message
+        pass
 
     def receive_message(self):
-        # Receive a message
-        if self.messages:
-            received_message = self.messages.pop(0)
-            print(f'Message received: {received_message}')
-            return received_message
-        else:
-            print('No messages to receive.')
-            return None
+        # Code to receive a message
+        pass

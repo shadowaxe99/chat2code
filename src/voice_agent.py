@@ -7,4 +7,4 @@ class VoiceAgent(AIAgent):
     def voice_interaction(self):
         # Overriding the voice_interaction method
         # Code to handle voice interactions
-        pass
+        print('Voice interaction initiated.')

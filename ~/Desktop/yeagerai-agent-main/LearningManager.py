@@ -3,9 +3,9 @@ class LearningManager:
         pass
 
     def train(self):
-        # TODO: Implement actual training logic
+        print('Training the model...')
         pass
 
     def evaluate(self):
-        # TODO: Implement actual evaluation logic
+        print('Evaluating the model...')
         pass

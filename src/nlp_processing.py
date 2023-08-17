@@ -1,19 +1,22 @@
-class NLPProcessing:
+class NLPProcessor:
     def __init__(self):
-        pass
+        self.lemmatizer = WordNetLemmatizer()
+        self.stop_words = set(stopwords.words('english'))
 
     def preprocess_text(self, text):
-        # Code to preprocess text
-        pass
+        tokenized_text = word_tokenize(text.lower())
+        cleaned_text = [self.lemmatizer.lemmatize(word) for word in tokenized_text if word not in self.stop_words]
+        return cleaned_text
 
-    def analyze_sentiment(self, text):
-        # Code to analyze sentiment of text
-        pass
+    def analyze_sentiment(self, chat_data):
+        sentiment = TextBlob(chat_data).sentiment
+        return sentiment
 
-    def extract_entities(self, text):
-        # Code to extract entities from text
-        pass
+    def extract_entities(self, chat_data):
+        doc = nlp(chat_data)
+        entities = [(ent.text, ent.label_) for ent in doc.ents]
+        return entities
 
-    def generate_response(self, text):
-        # Code to generate response based on input text
-        pass
+    def generate_response(self, text_data):
+        response = self.gpt_model.generate(text_data)
+        return response
